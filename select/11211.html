@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<!--结构  逻辑   数据-->
+<div id="root">
+    <div class="select-box">
+        <div class="select-input">
+            <input type="text" v-model="title" @focus="focus">
+        </div>
+        <ul class="select-list" >
+            <li v-for="item in datas" @click="click(item.title)" v-show="status==true">{{item.title}}</li>
+        </ul>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
